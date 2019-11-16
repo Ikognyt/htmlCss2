@@ -1,0 +1,23 @@
+.shadow-test  {
+    padding: 4em;
+    box-sizing: border-box;
+    width: 20%;
+    background-color: royalblue;
+    position: absolute;
+    top: 10em;
+    right: 25em;
+    box-shadow: 10px 10px #000, -10px -10px orange ;
+} .shadow-test2 {
+    padding: 4em;
+    box-sizing: border-box;
+    width: 20%;
+    background-color: royalblue;
+    position: absolute;
+    top: 10em;
+    right: 45em;
+    box-shadow: 0 0 0 2px #000,
+                 0 0 0 8px white, 
+                 0 0 0 10px #000, 
+                 0 0 0 16px white, 
+                 0 0 0 18px #000;
+} 
