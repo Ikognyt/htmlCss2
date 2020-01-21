@@ -1,18 +1,57 @@
-.citacao-bio {
+main a:hover  {
+    color: red;
+}
+
+tabindex:nth-of-type(odd):focus {
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    right: 24%;
+    top: 20%;
+    transform: scale(1.2) ,rotate(8deg);
+    z-index: 500px;
+} tabindex:nth-of-type(even):focus {
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    right: 24%;
+    top: 20%;
+    transform: scale(1.2) ,rotate(-8deg);
+    z-index: 500px;
+}
+
+blockquote:nth-of-type(n + 1) {
     background-color: #D9E5E3;
     border: .5em solid #C2CCCA;
     padding: 1em;
+    padding-top: .5em;
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
 }
 
-.petrobras {
+blockquote:nth-of-type(odd) {
+    float: right;
+    margin-right: 0;
+}
+
+blockquote:nth-of-type(even) {
     float: left;
     margin-left: 0;
 }
 
-.fiat {
-    float: right;
-    margin-right: 0;
+blockquote:nth-of-type(odd):hover {
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    right: 24%;
+    top: 20%;
+    transform: scale(1.2) ,rotate(8deg);
+    z-index: 500px;
+} blockquote:nth-of-type(even):hover {
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    left: 4%;
+    top: 40%;
+    transform:  scale(1.2) ,rotate(-8deg);
+    z-index: 500px;
 }
+
+
