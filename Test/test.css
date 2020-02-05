@@ -21,3 +21,15 @@
                  0 0 0 16px white, 
                  0 0 0 18px #000;
 } 
+
+.pseudoclass-test::before{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: block;
+    content: '=)';
+
+}
+
+
+

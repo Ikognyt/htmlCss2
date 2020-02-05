@@ -55,3 +55,24 @@ blockquote:nth-of-type(odd):hover {
 }
 
 
+blockquote::before{
+    font-size: 5em;
+    font-style: oblique;
+    content: '"';
+    position: absolute;
+    color: rgba(0, 0, 0, 0.25);
+
+}
+
+blockquote > p{
+    position: relative;
+}
+
+
+.container > p::first-letter {
+    font-size: 2em;
+    font-style: oblique;
+    text-shadow: .8px .8px black;
+    margin-right: .2ch;
+    line-height: 1;
+}
