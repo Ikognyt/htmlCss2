@@ -7,11 +7,20 @@
     padding: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
-    
+    flex: 1 1 45%;
 }
 
 .portfolio img {
     width: 100%;
     box-shadow: 0 0 4px #000;
     
-} 
+    
+} .portfolio li:nth-child(1) {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}

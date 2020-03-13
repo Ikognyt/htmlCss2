@@ -1,78 +1,132 @@
-main a:hover  {
-    color: red;
-}
-
-tabindex:nth-of-type(odd):focus {
-    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
-    position: fixed;
-    right: 24%;
-    top: 20%;
-    transform: scale(1.2) ,rotate(8deg);
-    z-index: 500px;
-} tabindex:nth-of-type(even):focus {
-    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
-    position: fixed;
-    right: 24%;
-    top: 20%;
-    transform: scale(1.2) ,rotate(-8deg);
-    z-index: 500px;
-}
-
-blockquote:nth-of-type(n + 1) {
+.citacao-bio {
     background-color: #D9E5E3;
     border: .5em solid #C2CCCA;
     padding: 1em;
-    padding-top: .5em;
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    transition: transform 1s linear, box-shadow 1s ease-in;
+    transition-delay: 0s, 1s;
+    position: relative;
+    animation: quica 1s infinite;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation: quica 1s infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
 }
 
-blockquote:nth-of-type(odd) {
-    float: right;
-    margin-right: 0;
+@keyframes quica {
+    from {
+        top: 1em;
+    } 9% {
+        transform: rotate(-2deg);
+    } 6% {
+        transform: rotate(2deg);
+    }
+     to {
+        top: 0;
+    }
 }
 
-blockquote:nth-of-type(even) {
+h1 {
+    animation: aparece 2s ease-out;
+    -webkit-animation: aparece 2s ease-out;
+}
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes aparece {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.citacao-bio:nth-of-type(even) {
     float: left;
     margin-left: 0;
 }
 
-blockquote:nth-of-type(odd):hover {
-    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
-    position: fixed;
-    right: 24%;
-    top: 20%;
-    transform: scale(1.2) ,rotate(8deg);
-    z-index: 500px;
-} blockquote:nth-of-type(even):hover {
-    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.75);
-    position: fixed;
-    left: 4%;
-    top: 40%;
-    transform:  scale(1.2) ,rotate(-8deg);
-    z-index: 500px;
+.citacao-bio:nth-of-type(odd) {
+    float: right;
+    margin-right: 0;
 }
 
-
-blockquote::before{
-    font-size: 5em;
-    font-style: oblique;
-    content: '"';
-    position: absolute;
-    color: rgba(0, 0, 0, 0.25);
-
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    transition-delay: 0s, 1s;
 }
 
-blockquote > p{
-    position: relative;
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
 }
 
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
+}
 
 .container > p::first-letter {
-    font-size: 2em;
-    font-style: oblique;
-    text-shadow: .8px .8px black;
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
     margin-right: .2ch;
     line-height: 1;
 }
+
+.citacao-bio::before {
+    content: '“';
+    position: absolute;
+    font-size: 10em;
+    line-height: .8;
+    color: #bbb;
+}
+
+.citacao-bio > p {
+    position: relative;
+}
+
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
+}
+
+.habilidades th {
+    font-weight: bold;
+    background-color: #851944;
+    color: white;
+}
+
+.habilidades td {
+    background-color: #eee;
+}
+
+.habilidades th,
+.habilidades td {
+    padding: 1em;
+}
+
+.habilidades thead th {
+    background-color: #3C1D3D;
+}
+
+.habilidades [colspan] {
+    text-align: center;
+    font-style: italic;
+}
+.habilidades [rowspan] {
+    vertical-align: middle;
+}
+
+

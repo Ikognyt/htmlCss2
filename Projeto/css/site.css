@@ -3,6 +3,8 @@ body {
     background-color: #F2FFFC;
     font-size: 120%;
     line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1,
@@ -55,7 +57,8 @@ ol a:hover{
     text-align: center;
     background-color: #3C1D3D;
     color: #F2FFFC;
-    padding: 1em;
+    padding: .8em;
+    padding-top: calc(300px + 1em);
 }
 
 .navegacao-site a {
@@ -146,30 +149,27 @@ em {
 }
 
 main {
-    width: 80%;
-    float: left;
     padding-bottom: 4em;
+    flex-grow: 1;
+    
 }
 
 .minha-foto,
 .navegacao-site {
-    border-left: .5em solid black;
-    border-bottom: .5em solid black;
     box-sizing: border-box;
+    border-left: .5em solid black;
 }
 
 .navegacao-site {
-    width: 20%;
-    float: right;
-    position: relative;
-    top: 300px;
+    width: calc(0.9 * 300px);
 }
 
 .minha-foto {
     position: absolute;
     top: 0;
     right: 0;
-    height: 300px;
+    height: 14em;
+    border-bottom: .5em solid black;
 }
 
 
